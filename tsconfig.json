@@ -1,0 +1,15 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"strict": true,
+		"target": "ES2022",
+		"module": "ES2022",
+		"lib": ["ES2022", "DOM"],
+		"paths": {
+			"@components/*": ["components/*"],
+			"@layout": ["layouts/Layout.astro"],
+			"@pages/*": ["pages/*"]
+		}
+	}
+}
