@@ -2,65 +2,75 @@
 
 ---
 
-<header class='relative' id='home'>
-	<div class='flex justify-center md:justify-between items-center max-w-[1200px] w-full mx-auto py-3 px-4'>
-		<div class='hidden md:block bg-gradient-to-br from-indigo-600 to-green-500 rounded-full p-[3px]'>
-			<img class='rounded-full w-16 h-16' src='images/profile.jpg' alt='leo photo' />
-		</div>
+<header class="relative" id="home">
+  <div
+    class="container mx-auto flex w-full items-center justify-center px-4 py-3 md:justify-between"
+  >
+    <div
+      class="hidden rounded-full bg-gradient-to-br from-indigo-600 to-green-500 p-[3px] md:block"
+    >
+      <img
+        class="h-16 w-16 rounded-full"
+        src="images/profile.jpg"
+        alt="leo photo"
+      />
+    </div>
 
-		<nav class='flex gap-x-4 backdrop-blur-md backdrop-brightness-200 rounded-md'>
-			<a href='#home'>Home</a>
-			<a href='#about'>About</a>
-			<a href='#projects'>Projects</a>
-			<a href='#contact'>Contact</a>
-		</nav>
-	</div>
+    <nav
+      class="flex w-full justify-between gap-x-10 rounded-md font-semibold tracking-wide backdrop-blur-md backdrop-brightness-200 md:w-auto"
+    >
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <style>
-	a {
-		padding: 0.5em 0.8em;
-		color: rgb(255, 255, 255);
-		position: relative;
-		text-decoration: none;
-		font-size: 16px;
-	}
+  a {
+    padding: 0.5em 0.8em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+  }
 
-	a::before,
-	a::after {
-		content: '';
-		height: 14px;
-		width: 14px;
-		position: absolute;
-		transition: all 0.25s ease;
-		opacity: 0;
-	}
+  a::before,
+  a::after {
+    content: "";
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all 0.25s ease;
+    opacity: 0;
+  }
 
-	a::before {
-		content: '';
-		right: 0;
-		top: 0;
-		border-top: 3px solid #3e8914;
-		border-right: 3px solid #2e640f;
-		transform: translate(-100%, 50%);
-	}
+  a::before {
+    content: "";
+    right: 0;
+    top: 0;
+    border-top: 3px solid #3e8914;
+    border-right: 3px solid #2e640f;
+    transform: translate(-100%, 50%);
+  }
 
-	a:after {
-		content: '';
-		left: 0;
-		bottom: 0;
-		border-bottom: 3px solid #2e640f;
-		border-left: 3px solid #3e8914;
-		transform: translate(100%, -50%);
-	}
+  a:after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #2e640f;
+    border-left: 3px solid #3e8914;
+    transform: translate(100%, -50%);
+  }
 
-	a:hover:before,
-	a:hover:after {
-		transform: translate(0, -0);
-		opacity: 1;
-	}
+  a:hover:before,
+  a:hover:after {
+    transform: translate(0, -0);
+    opacity: 1;
+  }
 
-	a:hover {
-		color: #3da35d;
-	}
+  a:hover {
+    color: #3da35d;
+  }
 </style>
