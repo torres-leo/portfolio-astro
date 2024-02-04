@@ -2,12 +2,16 @@
 interface Props {
   customClass?: string;
   title?: string;
+  id: string;
 }
 
-const { customClass, title } = Astro.props;
+const { customClass, title, id } = Astro.props;
 ---
 
-<section class=`mb-20 mx-auto w-full max-w-[1200px] ${customClass ?? ''}`>
-  {title && <h2 class="text-6xl font-bold mb-4"> {title}</h2>}
+<section
+  id={id}
+  class=`mb-20 mx-auto w-full max-w-[1200px] ${customClass ?? ''}`
+>
+  {title && <h2 class="text-4xl md:text-6xl font-bold mb-6"> {title}</h2>}
   <slot />
 </section>
