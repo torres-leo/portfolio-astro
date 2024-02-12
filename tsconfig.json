@@ -8,7 +8,7 @@
     "lib": ["ES2022", "DOM"],
     "paths": {
       "@components/*": ["components/*"],
-      "@layout": ["layouts/Layout.astro"],
+      "@layout": ["layout/Layout.astro"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
       "@icons/*": ["components/icons/*"],

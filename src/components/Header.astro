@@ -1,10 +1,33 @@
 ---
+const sections = [
+  {
+    id: "#home",
+    title: "Home",
+  },
+  {
+    id: "#about",
+    title: "About",
+  },
+  {
+    id: "#experience",
+    title: "Experience",
+  },
+  {
+    id: "#projects",
+    title: "Projects",
+  },
+  {
+    id: "#contact",
+    title: "Contact",
+  },
+];
+
 
 ---
 
 <header class="relative" id="home">
   <div
-    class="container mx-auto flex w-full items-center justify-center px-4 py-3 md:justify-between"
+    class="container max-w-[1400px] mx-auto flex w-full items-center justify-center px-2 py-2 sm:px-4 sm:py-3 lg:px-8 lg:py-4 md:justify-between"
   >
     <div
       class="hidden rounded-full bg-gradient-to-br from-indigo-600 to-green-500 p-[3px] md:block"
@@ -17,24 +40,23 @@
     </div>
 
     <nav
-      class="flex w-full justify-between gap-x-10 rounded-md font-semibold tracking-wide backdrop-blur-md backdrop-brightness-200 md:w-auto"
+      class="flex w-full justify-between gap-x-0 md:gap-x-10 rounded-md font-semibold tracking-wide backdrop-blur-md backdrop-brightness-200 md:w-auto p-1 md:p-0"
     >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      {
+      sections.map((s) => {
+        return <a href=`${s.id}`>{s.title}</a>
+        })
+      }
+
     </nav>
   </div>
 </header>
 
 <style>
+
   a {
-    padding: 0.5em 0.8em;
-    color: rgb(255, 255, 255);
+    padding: 8px 12.5px;
     position: relative;
-    text-decoration: none;
-    font-size: 16px;
   }
 
   a::before,
@@ -73,5 +95,11 @@
 
   a:hover {
     color: #3da35d;
+  }
+
+  @media screen and (width < 640px) {
+    a {
+      padding: 4px 6.5px;
+    }
   }
 </style>
