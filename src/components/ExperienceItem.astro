@@ -3,11 +3,12 @@ interface Props {
   title: string;
   company?: string;
   description?: string;
+  jobFunctions: string[];
   date: string;
   link?: string;
 }
 
-const { title, company, description, date, link } = Astro.props;
+const { title, company, description, date, link, jobFunctions } = Astro.props;
 ---
 
 <div
@@ -19,15 +20,28 @@ const { title, company, description, date, link } = Astro.props;
   >{date}</time
 >
 <h3
-  class="text-lg font-semibold text-yellow-200 dark:text-white tracking-wide mb-1 mt-3"
+  class="text-base md:text-lg font-semibold text-yellow-200 dark:text-white tracking-wide mb-1 mt-3"
 >
   {title} ➖ {company}
 </h3>
-<p
-  class="mb-4 text-base font-normal text-gray-400 dark:text-gray-400 text-pretty"
->
-  {description}
-</p>
+
+<ul class="list-inside list-disc ps-2">
+  {
+    jobFunctions.map((jobFunction) => (
+      <li class="mb-1 text-base font-normal text-gray-400 dark:text-gray-400">
+        {jobFunction}
+      </li>
+    ))
+  }
+</ul>
+
+{
+  description && (
+    <p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-400 text-pretty">
+      {description}
+    </p>
+  )
+}
 {
   link && (
     <a

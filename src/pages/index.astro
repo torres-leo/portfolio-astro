@@ -1,11 +1,12 @@
 ---
-// import Layout from '../layouts/Layout.astro';
-import { links } from "@utils/constants/socials";
 import Layout from "@layout";
 
 import About from "@components/About.astro";
 import Container from "@components/Container.astro";
 import Experience from "@components/Experience.astro";
+import Briefcase from "@components/icons/Briefcase.astro";
+import Code from "@components/icons/Code.astro";
+import Projects from "@components/Projects.astro";
 ---
 
 <Layout title="Leo Torres | Frontend Developer">
@@ -15,5 +16,13 @@ import Experience from "@components/Experience.astro";
 
   <Container title="Experience" id="experience">
     <Experience />
+  </Container>
+
+  <Container id="projects">
+    <div class="flex gap-x-2 md:gap-x-4 items-center mb-6">
+      <Code customClass="size-9 md:mt-2" />
+      <h2 class="text-3xl md:text-5xl font-bold">Projects</h2>
+    </div>
+    <Projects />
   </Container>
 </Layout>
