@@ -28,9 +28,7 @@ const { title, company, description, date, link, jobFunctions } = Astro.props;
 <ul class="list-inside list-disc ps-2">
   {
     jobFunctions.map((jobFunction) => (
-      <li class="mb-1 text-base font-normal text-gray-400 dark:text-gray-400">
-        {jobFunction}
-      </li>
+      <li class="mb-1 text-base font-normal text-gray-300">{jobFunction}</li>
     ))
   }
 </ul>
