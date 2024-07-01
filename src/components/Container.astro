@@ -12,6 +12,13 @@ const { customClass, title, id } = Astro.props;
   id={id}
   class=`mb-20 md:mb-36 mx-auto w-full max-w-[1200px] ${customClass ?? ''}`
 >
-  {title && <h2 class="text-3xl md:text-5xl font-bold mb-6"> {title}</h2>}
+  {
+    title && (
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-100">
+        {" "}
+        {title}
+      </h2>
+    )
+  }
   <slot />
 </section>

@@ -47,14 +47,14 @@ const socials = [
     about new things for the web. I usually work with React, TypeScript and Node
     for backend.
   </h3>
-  <p class="text-sm">Managua, Nicaragua.</p>
+  <p class="text-sm text-gray-400">Managua, Nicaragua.</p>
 </div>
 
 <nav class="flex items-center gap-x-4 flex-wrap gap-y-3 mb-6">
   {
     socials.map((item) => (
-      <SocialPill path={item.path}>
-        <item.iconComponent customClass="size-4 sm:size-5" />
+      <SocialPill path={item.path} customClass="text-gray-300">
+        <item.iconComponent customClass="size-4 sm:size-5 text-white" />
         {item.title}
       </SocialPill>
     ))

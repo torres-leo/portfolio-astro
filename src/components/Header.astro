@@ -35,8 +35,8 @@ const sections = [
       class="flex w-full justify-between gap-x-0 md:gap-x-10 rounded-md font-semibold tracking-wide backdrop-blur-md backdrop-brightness-200 md:w-auto p-1 md:p-0"
     >
       {
-      sections.map((s) => {
-        return <a href=`${s.id}`>{s.title}</a>
+      sections.map((section) => {
+        return <a href=`${section.id}`>{section.title}</a>
         })
       }
 
@@ -47,8 +47,10 @@ const sections = [
 <style>
 
   a {
+    color: white;
     padding: 8px 12.5px;
     position: relative;
+
   }
 
   a::before,
